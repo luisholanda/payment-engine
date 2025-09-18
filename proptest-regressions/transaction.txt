@@ -1,0 +1,9 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 7c8d9b3694d4984ef14a69f62802a7c8dbc670b0448377e85babce9d955bcb08 # shrinks to tx = Transaction { id: 0, client: 0, payload: Deposit { amount: D64(digits=[13579567614117601365], exp=[8], flags=[], signals=[!INEXACT, !ROUND], ctx=[R=HalfUp, S=!DBZ, !INV, !OFW], extra=[0.0000000]) } }
+cc cebfeb215ab4618add0d35200611aa4c5bed0de4f12ef74bef29f54445ae8c01 # shrinks to tx = Transaction { id: 0, client: 0, payload: Deposit { amount: D128(digits=[103129269977945744711084803857345704624], exp=[3], flags=[], signals=[!INEXACT, !ROUND], ctx=[R=HalfUp, S=!DBZ, !INV, !OFW], extra=[0.0000000]) } }
+cc f9444d22933e66becde614c5cea57a211ce7ddb2d95bfae539ce85d7e2ba7c3e # shrinks to tx = Transaction { id: 0, client: 0, payload: Deposit { amount: D256(digits=[46753637178687493533522763565933616849414039550312236694703143720826451783917], exp=[6], flags=[], signals=[!CP, !INEXACT, !ROUND], ctx=[R=HalfUp, S=!DBZ, !INV, !OFW], extra=[0.0000000]) } }

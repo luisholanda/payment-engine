@@ -1,0 +1,8 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc bd59e879ce850828f99b88625cdfa0487e8e0c56fa1d0d2e2c1df05cc887b22c # shrinks to txs = [Transaction { id: 1151186032, client: 0, payload: Deposit { amount: D256(digits=[0], exp=[-4], flags=[], signals=[], ctx=[R=HalfUp, S=!DBZ, !INV, !OFW], extra=[0.0000000]) } }, Transaction { id: 1151186032, client: 0, payload: Dispute }]
+cc 74826dd0c59174a0278523474ace380d933430407f54fab551ccac6735cdcaa6 # shrinks to txs = [Transaction { id: 495711577, client: 0, payload: Chargeback }, Transaction { id: 495711577, client: 0, payload: Deposit { amount: D256(digits=[83398581137570455879680000], exp=[-4], flags=[], signals=[], ctx=[R=HalfUp, S=!DBZ, !INV, !OFW], extra=[0.0000000]) } }]
