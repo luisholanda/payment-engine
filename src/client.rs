@@ -73,25 +73,25 @@ impl Client {
 
 /// Tracks disputed transactions for a client.
 #[derive(Debug, Default)]
-pub(crate) struct Disputes {
+struct Disputes {
     txs: HashSet<u32>,
     chargebacks: HashSet<u32>,
 }
 
 impl Disputes {
-    pub(crate) fn is_disputed(&self, tx: u32) -> bool {
+    fn is_disputed(&self, tx: u32) -> bool {
         self.txs.contains(&tx) || self.chargebacks.contains(&tx)
     }
 
-    pub(crate) fn dispute(&mut self, tx: u32) -> bool {
+    fn dispute(&mut self, tx: u32) -> bool {
         self.txs.insert(tx)
     }
 
-    pub(crate) fn resolve(&mut self, tx: u32) -> bool {
+    fn resolve(&mut self, tx: u32) -> bool {
         self.txs.remove(&tx)
     }
 
-    pub(crate) fn chargeback(&mut self, tx: u32) -> bool {
+    fn chargeback(&mut self, tx: u32) -> bool {
         let found = self.txs.remove(&tx);
 
         if found {
